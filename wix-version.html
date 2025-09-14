@@ -364,11 +364,14 @@
 
 <script>
     // Form submission handler for Wix
-    document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your interest! We\'ll contact you within 24 hours to schedule your free consultation.');
-        this.reset();
-    });
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We\'ll contact you within 24 hours to schedule your free consultation.');
+            this.reset();
+        });
+    }
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

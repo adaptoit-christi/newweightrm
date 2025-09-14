@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The Weight RM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gym-green': '#556B2F',
+                        'gym-green-light': '#6B7F3A',
+                        'gym-green-dark': '#4A5D2A'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-black">
+                        THE WEIGHT <span class="text-black">RM</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Home</a>
+                    <a href="membership.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Membership</a>
+                    <a href="contact.html" class="text-gym-green font-medium">Contact</a>
+                    <a href="calendar.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Calendar</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Blog</a>
+                    <a href="products.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Products</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+                    Ready to Do the Work?
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    If you're committed to getting stronger and willing to be coached, let's talk. Consistency starts with showing up.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-2xl">
+                    <h2 class="text-2xl font-bold mb-6">Get Started Today</h2>
+                    <form class="space-y-6" id="contact-form">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                <input type="text" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                <input type="text" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Training Interest *</label>
+                            <select required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
+                                <option value="">Select Training Interest</option>
+                                <option value="one-on-one">One-on-One Training</option>
+                                <option value="semi-private">Semi-Private Training</option>
+                                <option value="consultation">Free Consultation</option>
+                                <option value="general">General Information</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Current Fitness Level</label>
+                            <select class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
+                                <option value="">Select Current Level</option>
+                                <option value="beginner">Beginner (new to strength training)</option>
+                                <option value="intermediate">Intermediate (6+ months experience)</option>
+                                <option value="advanced">Advanced (2+ years consistent training)</option>
+                                <option value="returning">Returning after time off</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Tell us about your goals</label>
+                            <textarea rows="4" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors" placeholder="What do you want to achieve? Any injuries or limitations we should know about?"></textarea>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Best time to contact you</label>
+                            <select class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
+                                <option value="">Select Preferred Time</option>
+                                <option value="morning">Morning (8am - 12pm)</option>
+                                <option value="afternoon">Afternoon (12pm - 5pm)</option>
+                                <option value="evening">Evening (5pm - 8pm)</option>
+                                <option value="anytime">Anytime</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-4 rounded-lg font-semibold transition-colors">
+                            Send Message
+                        </button>
+                        
+                        <p class="text-sm text-gray-600 text-center">
+                            * Required fields. We'll respond within 24 hours.
+                        </p>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6">Get In Touch</h2>
+                        <p class="text-gray-600 mb-8">
+                            We respond to every inquiry personally. No automated responses, no sales pressure—just honest conversation about whether we're the right fit for your goals.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gym-green rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Visit Our Facility</h3>
+                                <p class="text-gray-600">123 Fitness Street<br>Gym City, GC 12345</p>
+                                <p class="text-sm text-gym-green mt-2">Free consultation available</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gym-green rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Call or Text</h3>
+                                <p class="text-gray-600">(555) 123-4567</p>
+                                <p class="text-sm text-gym-green mt-2">Monday - Friday: 6am - 8pm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gym-green rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Email Us</h3>
+                                <p class="text-gray-600">info@theweightrm.com</p>
+                                <p class="text-sm text-gym-green mt-2">We respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gym-green rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Training Hours</h3>
+                                <div class="text-gray-600 space-y-1">
+                                    <p>Monday - Friday: 5am - 9pm</p>
+                                    <p>Saturday: 6am - 6pm</p>
+                                    <p>Sunday: 8am - 4pm</p>
+                                </div>
+                                <p class="text-sm text-gym-green mt-2">Flexible scheduling available</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick FAQ -->
+                    <div class="bg-white p-6 rounded-2xl">
+                        <h3 class="text-lg font-semibold mb-4">Quick Questions</h3>
+                        <div class="space-y-4 text-sm">
+                            <div>
+                                <p class="font-medium text-gym-green">Do I need to be in shape to start?</p>
+                                <p class="text-gray-600">No. We meet you where you are and build from there.</p>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gym-green">What if I have injuries?</p>
+                                <p class="text-gray-600">We work around limitations and often help improve them.</p>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gym-green">How often should I train?</p>
+                                <p class="text-gray-600">Depends on your goals. We typically recommend 2-3x per week.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4 text-white">
+                        THE WEIGHT <span class="text-white">RM</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Where fitness meets excellence. Evidence-based training for optimal results.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-gym-green transition-colors">Home</a></li>
+                        <li><a href="membership.html" class="hover:text-gym-green transition-colors">Membership</a></li>
+                        <li><a href="contact.html" class="hover:text-gym-green transition-colors">Contact</a></li>
+                        <li><a href="calendar.html" class="hover:text-gym-green transition-colors">Calendar</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Training Options</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-gym-green transition-colors">One-on-One Training</a></li>
+                        <li><a href="#" class="hover:text-gym-green transition-colors">Semi-Private Training</a></li>
+                        <li><a href="blog.html" class="hover:text-gym-green transition-colors">Training Blog</a></li>
+                        <li><a href="products.html" class="hover:text-gym-green transition-colors">Product Recommendations</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>(555) 123-4567</li>
+                        <li>info@theweightrm.com</li>
+                        <li class="text-gym-green">Schedule Consultation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 The Weight Rm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We\'ll contact you within 24 hours to schedule your consultation.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

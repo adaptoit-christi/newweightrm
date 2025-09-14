@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Recommendations - The Weight RM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gym-green': '#556B2F',
+                        'gym-green-light': '#6B7F3A',
+                        'gym-green-dark': '#4A5D2A'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .affiliate-disclaimer {
+            font-size: 0.75rem;
+            color: #6B7280;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-black">
+                        THE WEIGHT <span class="text-black">RM</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Home</a>
+                    <a href="membership.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Membership</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Contact</a>
+                    <a href="calendar.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Calendar</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Blog</a>
+                    <a href="products.html" class="text-gym-green font-medium">Products</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+                    Equipment We Trust
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Quality equipment we use in our gym and recommend for home training. No gimmicks, just proven tools.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Category Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="category-tab active bg-gym-green text-white px-6 py-3 rounded-lg font-semibold transition-colors" data-category="all">
+                    All Products
+                </button>
+                <button class="category-tab bg-white text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-colors" data-category="strength">
+                    Strength Equipment
+                </button>
+                <button class="category-tab bg-white text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-colors" data-category="accessories">
+                    Training Accessories
+                </button>
+                <button class="category-tab bg-white text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-colors" data-category="recovery">
+                    Recovery Tools
+                </button>
+                <button class="category-tab bg-white text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-colors" data-category="books">
+                    Learning Resources
+                </button>
+            </div>
+
+            <!-- Strength Equipment -->
+            <div class="category-section" data-category="strength">
+                <h2 class="text-2xl font-bold mb-8 text-center">Strength Training Equipment</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Barbell -->
+                    <div class="product-card bg-white rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Olympic Barbell</h3>
+                        <div class="text-gym-green font-semibold mb-2">$150 - $300</div>
+                        <p class="text-gray-600 text-sm mb-4">Standard 45lb Olympic barbell. The foundation of any serious home gym. Look for proper knurling and rotation.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-xs font-semibold">RECOMMENDED BRANDS:</div>
+                            <div class="text-xs text-gray-600">Rogue, Rep Fitness, American Barbell</div>
+                        </div>
+                        <button class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-2 rounded-lg font-semibold transition-colors">
+                            View Options
+                        </button>
+                    </div>
+
+                    <!-- Power Rack -->
+                    <div class="product-card bg-white rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6 2h12v20H6V2zm2 2v16h8V4H8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Power Rack/Squat Rack</h3>
+                        <div class="text-gym-green font-semibold mb-2">$400 - $1,200</div>
+                        <p class="text-gray-600 text-sm mb-4">Safety and versatility in one. Essential for squats, rack pulls, and safe solo training.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-xs font-semibold">RECOMMENDED BRANDS:</div>
+                            <div class="text-xs text-gray-600">Rogue R-3, Rep PR-4000, Titan T-3</div>
+                        </div>
+                        <button class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-2 rounded-lg font-semibold transition-colors">
+                            View Options
+                        </button>
+                    </div>
+
+                    <!-- Adjustable Bench -->
+                    <div class="product-card bg-white rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 8H4V6c0-1.11.89-2 2-2h12c1.11 0 2 .89 2 2v2zm0 2v8c0 1.11-.89 2-2 2H6c-1.11 0-2-.89-2-2v-8h16z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Adjustable Bench</h3>
+                        <div class="text-gym-green font-semibold mb-2">$200 - $500</div>
+                        <p class="text-gray-600 text-sm mb-4">Quality adjustable bench for pressing variations. Look for stability and smooth adjustment.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-xs font-semibold">RECOMMENDED BRANDS:</div>
+                            <div class="text-xs text-gray-600">Rep AB-3000, Rogue AB-2, Ironmaster</div>
+                        </div>
+                        <button class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-2 rounded-lg font-semibold transition-colors">
+                            View Options
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Training Accessories -->
+            <div class="category-section hidden" data-category="accessories">
+                <h2 class="text-2xl font-bold mb-8 text-center">Training Accessories</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Lifting Belt -->
+                    <div class="product-card bg-white rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">13mm Lifting Belt</h3>
+                        <div class="text-gym-green font-semibold mb-2">$80 - $150</div>
+                        <p class="text-gray-600 text-sm mb-4">Proper powerlifting belt for heavy squats and deadlifts. 13mm thickness, single prong closure.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-xs font-semibold">RECOMMENDED BRANDS:</div>
+                            <div class="text-xs text-gray-600">Pioneer, Inzer, SBD</div>
+                        </div>
+                        <button class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-2 rounded-lg font-semibold transition-colors">
+                            View Options
+                        </button>
+                    </div>
+
+                    <!-- Knee Sleeves -->
+                    <div class="product-card bg-white rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Knee Sleeves</h3>
+                        <div class="text-gym-green font-semibold mb-2">$40 - $80</div>
+                        <p class="text-gray-600 text-sm mb-4">7mm neoprene knee sleeves for warmth and support during squats and lunges.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-xs font-semibold">RECOMMENDED BRANDS:</div>
+                            <div class="text-xs text-gray-600">SBD, Rehband, Nordic Lifting</div>
+                        </div>
+                        <button class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-2 rounded-lg font-semibold transition-colors">
+                            View Options
+                        </button>
+                    </div>
+
+                    <!-- Wrist Wraps -->
+                    <div class="product-card bg-white rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Wrist Wraps</h3>
+                        <div class="text-gym-green font-semibold mb-2">$20 - $40</div>
+                        <p class="text-gray-600 text-sm mb-4">Support for heavy pressing movements. 18" length provides good support without overdependence.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-xs font-semibold">RECOMMENDED BRANDS:</div>
+                            <div class="text-xs text-gray-600">Gangsta Wraps, SBD, Rogue</div>
+                        </div>
+                        <button class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-2 rounded-lg font-semibold transition-colors">
+                            View Options
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recovery Tools -->
+            <div class="category-section hidden" data-category="recovery">
+                <h2 class="text-2xl font-bold mb-8 text-center">Recovery Tools</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Foam Roller -->
+                    <div class="product-card bg-white rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 6H4c-1.11 0-2 .89-2 2v8c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">High-Density Foam Roller</h3>
+                        <div class="text-gym-green font-semibold mb-2">$25 - $50</div>
+                        <p class="text-gray-600 text-sm mb-4">36" high-density foam roller for myofascial release and recovery. Essential for mobility work.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-xs font-semibold">RECOMMENDED BRANDS:</div>
+                            <div class="text-xs text-gray-600">TriggerPoint, Gaiam, LuxFit</div>
+                        </div>
+                        <button class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-2 rounded-lg font-semibold transition-colors">
+                            View Options
+                        </button>
+                    </div>
+
+                    <!-- Lacrosse Balls -->
+                    <div class="product-card bg-white rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Lacrosse Balls</h3>
+                        <div class="text-gym-green font-semibold mb-2">$10 - $20</div>
+                        <p class="text-gray-600 text-sm mb-4">Firm lacrosse balls for targeted trigger point release. Great for glutes, feet, and tight spots.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-xs font-semibold">RECOMMENDED BRANDS:</div>
+                            <div class="text-xs text-gray-600">Any quality lacrosse ball</div>
+                        </div>
+                        <button class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-2 rounded-lg font-semibold transition-colors">
+                            View Options
+                        </button>
+                    </div>
+
+                    <!-- Sleep Tracking -->
+                    <div class="product-card bg-white rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Sleep Tracking Device</h3>
+                        <div class="text-gym-green font-semibold mb-2">$100 - $300</div>
+                        <p class="text-gray-600 text-sm mb-4">Track sleep quality and recovery. Recovery happens during sleep—measure what matters.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-xs font-semibold">RECOMMENDED OPTIONS:</div>
+                            <div class="text-xs text-gray-600">WHOOP, Oura Ring, Garmin</div>
+                        </div>
+                        <button class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-2 rounded-lg font-semibold transition-colors">
+                            View Options
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Resources -->
+            <div class="category-section hidden" data-category="books">
+                <h2 class="text-2xl font-bold mb-8 text-center">Learning Resources</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Starting Strength -->
+                    <div class="product-card bg-white rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6 2h12v20H6V2zm2 2v16h8V4H8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Starting Strength</h3>
+                        <div class="text-gym-green font-semibold mb-2">by Mark Rippetoe</div>
+                        <p class="text-gray-600 text-sm mb-4">The definitive guide to basic barbell training. Essential reading for understanding movement mechanics.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-xs font-semibold">WHY WE RECOMMEND:</div>
+                            <div class="text-xs text-gray-600">Fundamental movement patterns explained clearly</div>
+                        </div>
+                        <button class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-2 rounded-lg font-semibold transition-colors">
+                            Find Book
+                        </button>
+                    </div>
+
+                    <!-- Practical Programming -->
+                    <div class="product-card bg-white rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6 2h12v20H6V2zm2 2v16h8V4H8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Practical Programming</h3>
+                        <div class="text-gym-green font-semibold mb-2">by Mark Rippetoe</div>
+                        <p class="text-gray-600 text-sm mb-4">How to design and progress training programs. Understand the science behind getting stronger.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-xs font-semibold">WHY WE RECOMMEND:</div>
+                            <div class="text-xs text-gray-600">Programming principles that actually work</div>
+                        </div>
+                        <button class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-2 rounded-lg font-semibold transition-colors">
+                            Find Book
+                        </button>
+                    </div>
+
+                    <!-- Huberman Lab -->
+                    <div class="product-card bg-white rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Huberman Lab Podcast</h3>
+                        <div class="text-gym-green font-semibold mb-2">by Andrew Huberman</div>
+                        <p class="text-gray-600 text-sm mb-4">Science-based tools for everyday life. Episodes on strength training, sleep, and performance.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="text-xs font-semibold">WHY WE RECOMMEND:</div>
+                            <div class="text-xs text-gray-600">Practical neuroscience for better training</div>
+                        </div>
+                        <button class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-2 rounded-lg font-semibold transition-colors">
+                            Listen Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Products View -->
+            <div class="category-section" data-category="all">
+                <div class="text-center mb-12">
+                    <p class="text-gray-600">Select a category above to view our specific equipment recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Philosophy Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Our Equipment Philosophy</h2>
+            <div class="space-y-6 text-lg text-gray-600">
+                <p>We don't recommend equipment we don't use. Every piece of gear on this page is something we've tested, used with clients, or own ourselves.</p>
+                <p>Quality matters more than quantity. Buy once, use for years. Cheap equipment breaks and costs more in the long run.</p>
+                <p>Start with the basics: barbell, rack, bench, plates. Master the fundamentals before adding accessories.</p>
+            </div>
+            
+            <div class="bg-gray-100 p-6 rounded-2xl mt-12 text-left">
+                <h3 class="text-lg font-bold mb-4">Affiliate Disclosure</h3>
+                <p class="affiliate-disclaimer">
+                    Some links on this page are affiliate links. This means we may earn a small commission if you purchase through these links, at no additional cost to you. We only recommend products we genuinely use and believe in. These commissions help support our gym and keep our content free.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4 text-white">
+                        THE WEIGHT <span class="text-white">RM</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Where fitness meets excellence. Evidence-based training for optimal results.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-gym-green transition-colors">Home</a></li>
+                        <li><a href="membership.html" class="hover:text-gym-green transition-colors">Membership</a></li>
+                        <li><a href="contact.html" class="hover:text-gym-green transition-colors">Contact</a></li>
+                        <li><a href="calendar.html" class="hover:text-gym-green transition-colors">Calendar</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Training Options</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-gym-green transition-colors">One-on-One Training</a></li>
+                        <li><a href="#" class="hover:text-gym-green transition-colors">Semi-Private Training</a></li>
+                        <li><a href="blog.html" class="hover:text-gym-green transition-colors">Training Blog</a></li>
+                        <li><a href="products.html" class="hover:text-gym-green transition-colors">Product Recommendations</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>(555) 123-4567</li>
+                        <li>info@theweightrm.com</li>
+                        <li class="text-gym-green">Schedule Consultation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 The Weight Rm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Category tab functionality
+        document.querySelectorAll('.category-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const category = this.dataset.category;
+                
+                // Update active tab
+                document.querySelectorAll('.category-tab').forEach(t => {
+                    t.classList.remove('active', 'bg-gym-green', 'text-white');
+                    t.classList.add('bg-white', 'text-gray-700');
+                });
+                this.classList.add('active', 'bg-gym-green', 'text-white');
+                this.classList.remove('bg-white', 'text-gray-700');
+                
+                // Show/hide sections
+                document.querySelectorAll('.category-section').forEach(section => {
+                    if (section.dataset.category === category || category === 'all') {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Product card click handlers
+        document.querySelectorAll('.product-card button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Redirecting to recommended retailers...');
+            });
+        });
+    </script>
+</body>
+</html>

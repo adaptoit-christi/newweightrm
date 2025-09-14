@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training Blog - The Weight RM</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <script>
         tailwind.config = {
             theme: {
@@ -19,7 +22,6 @@
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
@@ -67,7 +69,7 @@
             <div class="bg-white rounded-2xl overflow-hidden mb-16">
                 <div class="md:flex">
                     <div class="md:w-1/2">
-                        <img src="images/IMG_3596-2.jpg" alt="Progressive overload training" class="w-full h-80 md:h-full object-cover">
+                        <img src="images/IMG_3596-2.jpg" alt="Progressive overload training" class="w-full h-80 md:h-full object-cover" loading="lazy" width="380" height="320">
                     </div>
                     <div class="md:w-1/2 p-8 md:p-12">
                         <div class="text-gym-green text-sm font-semibold mb-2">FEATURED ARTICLE</div>
@@ -102,7 +104,7 @@
                     <div class="space-y-8">
                         <!-- Article 1 -->
                         <article class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
-                            <img src="images/IMG_3669-3.jpg" alt="Strength training basics" class="w-full h-48 object-cover">
+                            <img src="images/IMG_3669-3.jpg" alt="Strength training basics" class="w-full h-48 object-cover" loading="lazy" width="380" height="192">
                             <div class="p-6">
                                 <div class="text-gym-green text-sm font-semibold mb-2">TRAINING FUNDAMENTALS</div>
                                 <h3 class="text-xl font-bold mb-3">Why Most People Skip the Basics (And Why You Shouldn't)</h3>
@@ -124,7 +126,7 @@
 
                         <!-- Article 2 -->
                         <article class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
-                            <img src="images/IMG_3675-6.jpg" alt="Recovery and consistency" class="w-full h-48 object-cover">
+                            <img src="images/IMG_3675-6.jpg" alt="Recovery and consistency" class="w-full h-48 object-cover" loading="lazy" width="380" height="192">
                             <div class="p-6">
                                 <div class="text-gym-green text-sm font-semibold mb-2">RECOVERY</div>
                                 <h3 class="text-xl font-bold mb-3">Sleep, Recovery, and Why More Isn't Always Better</h3>
@@ -168,7 +170,7 @@
 
                         <!-- Article 4 -->
                         <article class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
-                            <img src="images/IMG_3595-1.jpg" alt="Mindset and consistency" class="w-full h-48 object-cover">
+                            <img src="images/IMG_3595-1.jpg" alt="Mindset and consistency" class="w-full h-48 object-cover" loading="lazy" width="380" height="192">
                             <div class="p-6">
                                 <div class="text-gym-green text-sm font-semibold mb-2">MINDSET</div>
                                 <h3 class="text-xl font-bold mb-3">Control the Controllables: A Training Philosophy</h3>
@@ -190,7 +192,7 @@
 
                         <!-- Article 5 -->
                         <article class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
-                            <img src="images/IMG_3669-3.jpg" alt="Form and technique" class="w-full h-48 object-cover">
+                            <img src="images/IMG_3669-3.jpg" alt="Form and technique" class="w-full h-48 object-cover" loading="lazy" width="380" height="192">
                             <div class="p-6">
                                 <div class="text-gym-green text-sm font-semibold mb-2">TECHNIQUE</div>
                                 <h3 class="text-xl font-bold mb-3">Perfect Form vs. Progressive Overload: Finding the Balance</h3>
@@ -253,21 +255,21 @@
                         <h3 class="text-lg font-bold mb-4">Recent Articles</h3>
                         <div class="space-y-4">
                             <article class="flex gap-3">
-                                <img src="images/IMG_3596-2.jpg" alt="Article thumbnail" class="w-16 h-16 object-cover rounded-lg">
+                                <img src="images/IMG_3596-2.jpg" alt="Article thumbnail" class="w-16 h-16 object-cover rounded-lg" loading="lazy" width="64" height="64">
                                 <div>
                                     <h4 class="font-semibold text-sm mb-1">Progressive Overload: The Only Thing That Matters</h4>
                                     <div class="text-xs text-gray-600">January 15, 2025</div>
                                 </div>
                             </article>
                             <article class="flex gap-3">
-                                <img src="images/IMG_3669-3.jpg" alt="Article thumbnail" class="w-16 h-16 object-cover rounded-lg">
+                                <img src="images/IMG_3669-3.jpg" alt="Article thumbnail" class="w-16 h-16 object-cover rounded-lg" loading="lazy" width="64" height="64">
                                 <div>
                                     <h4 class="font-semibold text-sm mb-1">Why Most People Skip the Basics</h4>
                                     <div class="text-xs text-gray-600">January 12, 2025</div>
                                 </div>
                             </article>
                             <article class="flex gap-3">
-                                <img src="images/IMG_3675-6.jpg" alt="Article thumbnail" class="w-16 h-16 object-cover rounded-lg">
+                                <img src="images/IMG_3675-6.jpg" alt="Article thumbnail" class="w-16 h-16 object-cover rounded-lg" loading="lazy" width="64" height="64">
                                 <div>
                                     <h4 class="font-semibold text-sm mb-1">Sleep, Recovery, and Why More Isn't Always Better</h4>
                                     <div class="text-xs text-gray-600">January 10, 2025</div>

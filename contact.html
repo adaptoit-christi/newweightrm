@@ -42,10 +42,10 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Home</a>
                     <a href="membership.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Membership</a>
+                    <a href="book-online.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Book Online</a>
                     <a href="contact.html" class="text-gym-green font-medium">Contact</a>
                     <a href="calendar.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Calendar</a>
                     <a href="blog.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Blog</a>
-                    <a href="products.html" class="text-gray-700 hover:text-gym-green font-medium transition-colors">Products</a>
                 </div>
             </div>
         </div>
@@ -65,81 +65,90 @@
         </div>
     </section>
 
+    <!-- Getting Started Options -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Choose How You'd Like to Get Started</h2>
+                <p class="text-xl text-gray-600">Multiple ways to begin your fitness journey with us</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Join/Contact Form -->
+                <div class="bg-gym-green-light bg-opacity-10 p-8 rounded-2xl text-center border-2 border-gym-green">
+                    <div class="w-16 h-16 bg-gym-green rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gym-green mb-3">New Member</h3>
+                    <p class="text-gray-600 mb-4">Join our community and complete our intake form to get started with a personalized fitness plan.</p>
+                    <div class="bg-gym-green text-white p-3 rounded-lg">
+                        <p class="text-sm font-semibold">Use the form below ↓</p>
+                    </div>
+                </div>
+
+                <!-- Book Sessions -->
+                <div class="bg-white p-8 rounded-2xl text-center border-2 border-gray-200 hover:border-gym-green transition-colors">
+                    <div class="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Existing Member</h3>
+                    <p class="text-gray-600 mb-4">Already a member? Schedule your semi-private training, HYROX classes, or gym sessions.</p>
+                    <a href="book-online.html" class="inline-block bg-gym-green hover:bg-gym-green-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                        Book Sessions
+                    </a>
+                </div>
+
+                <!-- Call/Text -->
+                <div class="bg-white p-8 rounded-2xl text-center border-2 border-gray-200 hover:border-gym-green transition-colors">
+                    <div class="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Questions?</h3>
+                    <p class="text-gray-600 mb-4">Prefer to talk? Call or text us directly for immediate assistance with any questions.</p>
+                    <a href="tel:+13104067938" class="inline-block bg-gym-green hover:bg-gym-green-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                        (310) 406-7938
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="py-20 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16">
-                <!-- Contact Form -->
-                <div class="bg-white p-8 rounded-2xl">
-                    <h2 class="text-2xl font-bold mb-6">Get Started Today</h2>
-                    <form class="space-y-6" id="contact-form">
-                        <div class="grid sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
-                                <input type="text" id="first-name" name="first-name" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
-                            </div>
-                            <div>
-                                <label for="last-name" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
-                                <input type="text" id="last-name" name="last-name" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
-                            </div>
+                <!-- Join Form Integration -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6 border-b">
+                        <h2 class="text-2xl font-bold text-center">Join The Weight RM</h2>
+                        <p class="text-gray-600 text-center mt-2">Complete this form to get started with your fitness journey</p>
+                    </div>
+
+                    <!-- Clubworx Join Integration -->
+                    <iframe
+                        src="https://app.clubworx.com/websites/theweightrm/join/iframe"
+                        width="100%"
+                        height="839"
+                        style="border:0; display:block;"
+                        title="Join The Weight RM"
+                        loading="lazy">
+                    </iframe>
+
+                    <!-- Powered by Clubworx -->
+                    <div style="text-align:center; padding: 12px; background-color: #f8f9fa; border-top: 1px solid #e9ecef;">
+                        <div style="font-size:12px; color:#6c757d; font-family: 'Inter', sans-serif; margin-bottom: 6px;">
+                            Powered by
                         </div>
-                        
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                            <input type="email" id="email" name="email" required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
-                        </div>
-                        
-                        <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Training Interest *</label>
-                            <select required class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
-                                <option value="">Select Training Interest</option>
-                                <option value="one-on-one">One-on-One Training</option>
-                                <option value="semi-private">Semi-Private Training</option>
-                                <option value="consultation">Free Consultation</option>
-                                <option value="general">General Information</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Current Fitness Level</label>
-                            <select class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
-                                <option value="">Select Current Level</option>
-                                <option value="beginner">Beginner (new to strength training)</option>
-                                <option value="intermediate">Intermediate (6+ months experience)</option>
-                                <option value="advanced">Advanced (2+ years consistent training)</option>
-                                <option value="returning">Returning after time off</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Tell us about your goals</label>
-                            <textarea rows="4" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors" placeholder="What do you want to achieve? Any injuries or limitations we should know about?"></textarea>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Best time to contact you</label>
-                            <select class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gym-green transition-colors">
-                                <option value="">Select Preferred Time</option>
-                                <option value="morning">Morning (8am - 12pm)</option>
-                                <option value="afternoon">Afternoon (12pm - 5pm)</option>
-                                <option value="evening">Evening (5pm - 8pm)</option>
-                                <option value="anytime">Anytime</option>
-                            </select>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-gym-green hover:bg-gym-green-dark text-white py-4 rounded-lg font-semibold transition-colors">
-                            Send Message
-                        </button>
-                        
-                        <p class="text-sm text-gray-600 text-center">
-                            * Required fields. We'll respond within 24 hours.
-                        </p>
-                    </form>
+                        <a href="https://www.clubworx.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://app.clubworx.com/logo.svg" style="height:18px;" alt="Clubworx">
+                        </a>
+                    </div>
                 </div>
                 
                 <!-- Contact Information -->
@@ -160,7 +169,7 @@
                             </div>
                             <div>
                                 <h3 class="font-semibold text-lg mb-1">Visit Our Facility</h3>
-                                <p class="text-gray-600">123 Fitness Street<br>Gym City, GC 12345</p>
+                                <p class="text-gray-600">2535 W. 237th Street Suite 128<br>Torrance, CA 90505</p>
                                 <p class="text-sm text-gym-green mt-2">Free consultation available</p>
                             </div>
                         </div>
@@ -173,7 +182,7 @@
                             </div>
                             <div>
                                 <h3 class="font-semibold text-lg mb-1">Call or Text</h3>
-                                <p class="text-gray-600">(555) 123-4567</p>
+                                <p class="text-gray-600">(310) 406-7938</p>
                                 <p class="text-sm text-gym-green mt-2">Monday - Friday: 6am - 8pm</p>
                             </div>
                         </div>
@@ -266,7 +275,7 @@
                 <div>
                     <h4 class="font-semibold mb-4">Contact Info</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>(555) 123-4567</li>
+                        <li>(310) 406-7938</li>
                         <li>info@theweightrm.com</li>
                         <li class="text-gym-green">Schedule Consultation</li>
                     </ul>

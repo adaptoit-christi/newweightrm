@@ -12,7 +12,11 @@
       "Bash(git branch:*)",
       "Bash(git push:*)",
       "Bash(py --version)",
-      "Read(//c/Users/Christi/OneDrive - AdapToIT/02_Clients/The Weight RM/11_Current_Website/**)"
+      "Read(//c/Users/Christi/OneDrive - AdapToIT/02_Clients/The Weight RM/11_Current_Website/**)",
+      "Bash(for file in book-online.html contact.html calendar.html blog.html)",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(grep:*)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []
